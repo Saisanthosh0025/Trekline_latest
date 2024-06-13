@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <title>Vehicle Rentals</title>
+    <style>
+         
+
+        .header a {
+            float: right; /* Move navigation links to the right */
+            display: block;
+            color: black;
+            text-align: left;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #faf7af;
+            color: black;
+        }
+
+        .header {
+            background: url('img/img5.jpg') no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            height: 60vh;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content {
+            transition: transform 0.3s;
+        }
+        .content2 {
+            background: url('img/img2.jpg') no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            height: 20vh;
+            padding: 60px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            background-color: #833ab4;
+            color: white;
+            display: block;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: bisque;
+            min-width: 60px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .dropdown .arrow {
+            content: "\25BC";
+            margin-left: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+         .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden */
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        /* Styling for the sidebar content */
+        .sidebar-content {
+            
+            padding: 16px;
+            color: transparent;
+        }
+
+        /* Styling for the open/close button */
+        #openCloseBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            text-align: center;
+            background-color: #833ab4;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #d3d3d3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            color: #005b96;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+   
+        <div class="navbar">
+            <img src="img/logo2.png" alt="Logo" class="logo" width="60px" style="border-radius: 1000px; ;">
+           
+            <div class="dropdown">
+                <a href="index.php"><b>Home</a>
+            </div>
+            <div class="dropdown">
+                <a href="about.php">About</a>
+            </div>
+            <div class="dropdown">
+                <a href="services.html">Services<span class="arrow"></span></a>
+                <div class="dropdown-content">
+                    <a href="touragency.html">Tour Agency</a>
+                    <a href="vehiclerentals.html">Vehicle Rentals</a>
+                    <a href="hotelbooking.html">Hotel Booking</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="gallery.php">Gallery</a>
+            </div>
+            <div class="dropdown">
+                <a href="contact.php">Contact</a>
+            </div>
+            <div class="dropdown">
+                <a href="emergency.php">Emergency</b></a>
+            </div>
+        </div>
+        
+        
+        <h1 align="center">TrekLine Vacations & Rentals</h1>
+    </div>
+    <h1 align="center" style="color: rgb(255, 102, 0);">Vehicle Rentals</h1>
+
+    <table border="1">
+        <tr>
+            <th>Vehicle Name</th>
+            <th>Vehicle Type</th>
+            <th>Seating Capacity</th>
+            <th>Rental Price (per day)</th>
+            <th>Book Now</th>
+            
+        </tr>
+        <tr>
+            <td>Compact Car</td>
+            <td>Sedan</td>
+            <td>4 passengers</td>
+            <td>$50 per person</td>
+            <td><a href="booking-bus.html">Book Now</a></td>
+        </tr>
+        <tr>
+            <td>SUV</td>
+            <td>Utility Vehicle</td>
+            <td>5 passengers</td>
+            <td>$70 per person</td>
+            <td><a href="booking-bus.html">Book Now</a></td>
+        </tr>
+        <tr>
+            <td>Minivan</td>
+            <td>Van</td>
+            <td>7 passengers</td>
+            <td>$80 per person</td>
+            <td><a href="booking-bus.html">Book Now</a></td>
+        </tr>
+        <tr>
+            <td>Luxury Sedan</td>
+            <td>Sedan</td>
+            <td>4 passengers</td>
+            <td>$100 per person</td>
+            <td><a href="booking-bus.html">Book Now</a></td>
+        </tr>
+        <tr>
+            <td>Full-size SUV</td>
+            <td>Utility Vehicle</td>
+            <td>7 passengers</td>
+            <td>$90 per person</td>
+            <td><a href="booking-bus.html">Book Now</a></td>
+        </tr>
+        <!-- Add more vehicle details as needed -->
+    </table><br>
+    <footer>
+        &copy; 2023 TrekLine Vacations & Rentals. All rights reserved.
+    </footer>
+
+</body>
+</html>

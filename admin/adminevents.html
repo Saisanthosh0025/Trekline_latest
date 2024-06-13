@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Notification</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #message {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #notifyButton {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width:30%;
+        }
+
+        #notifyButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2));">
+    <div id="message">
+        <h2>At present, no events are there. We will notify you shortly.</h2>
+        <button id="notifyButton" onclick="redirectToAdmin()">Back to Main Page</button>
+    </div>
+
+    <script>
+        function redirectToAdmin() {
+            // Redirect to adminindex.php
+            window.location.href = 'adminindex.php';
+        }
+    </script>
+</body>
+</html>

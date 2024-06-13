@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <title>TrekLine | Hotel Booking</title>
+    
+    <style>
+        
+        .header a {
+            float: right; /* Move navigation links to the right */
+            display: block;
+            color: black;
+            text-align: left;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #faf7af;
+            color: black;
+        }
+
+        .header {
+            background: url('img/img5.jpg') no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            height: 60vh;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content {
+            transition: transform 0.3s;
+        }
+        .content2 {
+            background: url('img/img2.jpg') no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            height: 20vh;
+            padding: 60px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            background-color: #833ab4;
+            color: white;
+            display: block;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: bisque;
+            min-width: 60px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .dropdown .arrow {
+            content: "\25BC";
+            margin-left: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+         .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden */
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        /* Styling for the sidebar content */
+        .sidebar-content {
+            
+            padding: 16px;
+            color: transparent;
+        }
+
+        /* Styling for the open/close button */
+        #openCloseBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #833ab4;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #d3d3d3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            color: #005b96;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+
+        .city-card {
+            background-color: #833ab4;
+            color: white;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .city-card:hover {
+            transform: scale(1.05);
+        }
+
+        .hotels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .hotel-card {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .book-button {
+            background-color: #833ab4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+   
+        <div class="navbar">
+            <img src="img/logo2.png" alt="Logo" class="logo" width="60px" style="border-radius: 1000px; ;">
+            
+            <div class="dropdown">
+                <a href="index.php"><b>Home</a>
+            </div>
+            <div class="dropdown">
+                <a href="about.php">About</a>
+            </div>
+            <div class="dropdown">
+                <a href="services.html">Services<span class="arrow"></span></a>
+                <div class="dropdown-content">
+                    <a href="touragency.html">Tour Agency</a>
+                    <a href="vehiclerentals.html">Vehicle Rentals</a>
+                    <a href="hotelbooking.html">Hotel Booking</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="gallery.php">Gallery</a>
+            </div>
+            <div class="dropdown">
+                <a href="contact.php">Contact</a>
+            </div>
+            <div class="dropdown">
+                <a href="emergency.php">Emergency</b></a>
+            </div>
+            <h1 align="center">TrekLine Vacations & Rentals</h1>
+        </div>
+        
+        </div>
+        <div class="container">
+            <div class="city-card" onclick="showHotels('New York')">New York</div>
+            <div class="city-card" onclick="showHotels('Paris')">Paris</div>
+            <div class="city-card" onclick="showHotels('Tokyo')">Tokyo</div>
+            </div>
+            <div class="container">
+            <div class="city-card" onclick="showHotels('New Delhi')">New Delhi</div>
+            <div class="city-card" onclick="showHotels('Agra')">Agra</div>
+            <div class="city-card" onclick="showHotels('Mumbai')">Mumbai</div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="city-card" onclick="showHotels('Kerala')">Kerala</div>
+    <div class="city-card" onclick="showHotels('Varanasi')">Varanasi</div>
+    <div class="city-card" onclick="showHotels('Ladakh')">Ladakh</div>
+</div>
+        <div class="hotels">
+            <!-- Hotels will be displayed here -->
+        </div>
+        
+    
+
+
+    <footer>
+        &copy; 2023 TrekLine Vacations & Rentals. All rights reserved.
+    </footer>
+    
+    
+   
+    
+    <script>
+        function showHotels(city) {
+            const hotelsContainer = document.querySelector(".hotels");
+            hotelsContainer.innerHTML = "";
+
+            const hotels = getHotelsByCity(city);
+
+            hotels.forEach((hotel) => {
+                const hotelCard = document.createElement("div");
+                hotelCard.className = "hotel-card";
+
+                hotelCard.innerHTML = `
+                    <h3>${hotel.name}</h3>
+                    <p>Location: ${hotel.location}</p>
+                    <p>Price: $${hotel.price} per night</p>
+                    <button class="book-button" onclick="openpg()">Book Now</button>
+                `;
+
+                hotelsContainer.appendChild(hotelCard);
+            });
+        }
+
+        function getHotelsByCity(city) {
+            // Replace this with your hotel data retrieval logic
+            const hotels = [
+                { name: "Premium Hotel A", location: city, price: 200 },
+                { name: "First-Class Hotel B", location: city, price: 150 },
+                { name: "Second-Class Hotel C", location: city, price: 100 },
+            ];
+            return hotels;
+        }
+
+        function bookHotel(hotelName) {
+            // Replace this with your booking logic
+            alert(`Booking confirmed for ${hotelName}!`);
+        }
+        function openpg(){
+            window.location.href = 'hotelform.html';
+        }
+    </script>
+</body>
+</html>

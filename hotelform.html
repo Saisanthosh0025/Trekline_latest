@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <title>TrekLine | About Us</title>
+    <style>
+         .navbar {
+            overflow: ;
+        }
+
+        .header a {
+            float: right; /* Move navigation links to the right */
+            display: block;
+            color: black;
+            text-align: left;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #faf7af;
+            color: black;
+        }
+
+        .header {
+            background: url('img/img5.jpg') no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            height: 60vh;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content {
+            transition: transform 0.3s;
+        }
+        .content2 {
+            background: url('img/img2.jpg') no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            height: 20vh;
+            padding: 60px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            background-color: #833ab4;
+            color: white;
+            display: block;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: bisque;
+            min-width: 60px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .dropdown .arrow {
+            content: "\25BC";
+            margin-left: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+         .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden */
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        /* Styling for the sidebar content */
+        .sidebar-content {
+            
+            padding: 16px;
+            color: transparent;
+        }
+
+        /* Styling for the open/close button */
+        #openCloseBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            text-align: center;
+            background-color: #833ab4;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #d3d3d3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            color: #005b96;
+        }
+        input {
+    width: 90%;
+    align-items: center;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Add a transition for a border color change */
+}
+
+input:focus {
+    border-color: #c300ff;
+}
+a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            color: #005b96;
+        }
+        input {
+    width: 90%;
+    align-items: center;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Add a transition for a border color change */
+}
+
+input:focus {
+    border-color: #c300ff;
+}
+.buttonsx {
+
+background: #c300ff;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 15px;
+cursor: pointer;
+width: 20%;
+transition: background 0.3s; /* Add a transition for a background color change */
+}
+
+.buttonsx:hover {
+background: #0056b3;
+}
+
+    .error-message {
+        background: ; /* 40% transparent white background */
+        color: red;
+        text-align: center;
+        padding: 5px; /* Add some padding to the error message container */
+    }
+
+    /* Style the select element */
+.custom-dropdown {
+width: 90%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background: #fff;
+font-size: 16px;
+color: #333;
+transition: border-color 0.3s; /* Add a transition for a border color change */
+}
+
+.custom-dropdown:focus {
+border-color: #c300ff;
+}
+
+/* Style the dropdown arrow indicator */
+.custom-dropdown::after {
+content: "\25BC"; /* Downward pointing arrow character */
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 14px;
+pointer-events: none;
+}
+
+/* Style the dropdown options */
+.custom-dropdown option {
+background: #fff;
+color: #333;
+} 
+    </style>
+</head>
+<body>
+    <div class="header">
+   
+        <div class="navbar">
+            <img src="img/logo2.png" alt="Logo" class="logo" width="60px" style="border-radius: 1000px; ;">
+            
+            <div class="dropdown">
+                <a href="index.php"><b>Home</a>
+            </div>
+            <div class="dropdown">
+                <a href="about.php">About</a>
+            </div>
+            <div class="dropdown">
+                <a href="services.html">Services<span class="arrow"></span></a>
+                <div class="dropdown-content">
+                    <a href="touragency.html">Tour Agency</a>
+                    <a href="vehiclerentals.html">Vehicle Rentals</a>
+                    <a href="hotelbooking.html">Hotel Booking</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="gallery.php">Gallery</a>
+            </div>
+            <div class="dropdown">
+                <a href="contact.php">Contact</a>
+            </div>
+            <div class="dropdown">
+                <a href="emergency.php">Emergency</b></a>
+            </div>
+        </div>
+        
+            <h1 align="center">TrekLine Vacations & Rentals</h1>
+        </div>
+        
+        </div>
+        
+        
+    <h1 align="center" style="color: rgb(255, 102, 0);">Hotel Booking Form</h1>
+    <form id="hotelForm" method="post" action="hotel.php">
+        <table border="1">
+        <tr>
+            <th>Details</th>
+            <th>Input</th>
+        </tr>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr>
+            <td><label for="text">Mobile Number:</label></td>
+            <td><input type="text" id="num" name="num" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td><label for="date">Check in:</label></td>
+            <td><input type="date" id="chkin" name="chkin" required></td>
+        </tr>
+        <tr>
+            <td><label for="date">Check out:</label></td>
+            <td><input type="date" id="chkout" name="chkout" required></td>
+        </tr>
+        <tr>
+            <td><label for="packageSelect">Select a Days:</label></td>
+            <td>
+                <select class="custom-dropdown" id="packageSelect" name="days" required>
+                    <option value="">Select a days</option>
+                    <option value="1">1 day</option>
+                    <option value="2">2 days</option>
+                    <option value="3">3 days</option>
+                    <option value="4">4 days</option>
+                    <option value="5">5 days</option>
+                    <option value="6">6 days</option>
+                    <option value="7">7 days</option>
+                    <option value="8">more than 8 days</option>
+
+                    
+
+
+                    <!-- Add more package options as needed -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="persons">Number of Persons:</label></td>
+            <td><input type="number" id="persons" name="persons" min="1" required></td>
+            
+        </tr>
+        <tr>
+            <td><label for="price">Price:</label></td>
+            <td><input type="text" id="price" name="price" readonly>
+                <button class="buttonsx"type="button" onclick="calculatePrice()">Calculate Price</button></td>
+        </tr>
+        
+        <tr>
+            <td><button class="buttonsx" type="reset">Reset</button></td>
+            
+            <td><button class="buttonsx" type="submit" value="book">Submit</button></td>
+            
+        </tr>
+    </table>
+    </form>
+    
+    <footer>
+        &copy; 2023 TrekLine Vacations & Rentals. All rights reserved.
+    </footer>
+
+    <script>
+        // JavaScript to update the price based on the selected package and number of persons
+        const packageSelect = document.getElementById("packageSelect");
+        const priceInput = document.getElementById("price");
+        const personsInput = document.getElementById("persons");
+
+        // Price data for packages
+        const packagePrices = {
+            "1": 20,
+            "2": 40,
+            "3": 60,
+            "4": 80,
+            "5": 90,
+            "6": 100,
+            "7": 110,
+            "8": 120,
+           
+            // Add more package prices here
+        };
+
+        function calculatePrice() {
+            const selectedPackage = packageSelect.value;
+            const numberOfPersons = parseInt(personsInput.value, 10);
+            if (selectedPackage in packagePrices && !isNaN(numberOfPersons)) {
+                const totalPrice = packagePrices[selectedPackage] * numberOfPersons;
+                priceInput.value = `$${totalPrice}`;
+            } else {
+                priceInput.value = ""; // Clear the price if the package is not found or the number of persons is invalid
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    
+    <title>TrekLine Vacations & Rentals</title>
+    <style>
+        /* Your existing CSS styles here... */
+
+        .center-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255,0.000000000001); /* 40% transparent white background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .center-box a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+         z-index: -1; 
+        }
+
+
+        .center-box a:hover {
+            background: #c300ff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="img/mainback.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="center-box">
+           
+            <h1 style="color: white;">Welcome to the TrekLine Vacations & Rentals</h1>
+            <h3 style="color: white;">Please SignIn or SignUp </h3>
+            <a href="login.php">Sign In</a><br><br>
+            <a href="signup.php">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
